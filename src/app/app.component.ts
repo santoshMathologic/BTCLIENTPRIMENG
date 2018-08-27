@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  handleClick() {
+    //execute action
+    console.log("I am at login");
+}
+
+
 }
