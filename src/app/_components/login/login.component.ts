@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import {InputTextModule} from 'primeng/inputtext';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,6 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-    
+    console.log("Login here");
   }
 }
