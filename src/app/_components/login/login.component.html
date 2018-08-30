@@ -9,12 +9,17 @@
       <div class="formBox">
         <form #loginForm="ngForm" novalidate>
 
-          <input type="text" name="username" placeholder="Username" pInputText [(ngModel)]="username" autocomplete="off" />
+          <span class="ui-float-label">
+            <input type="text" name="username" id="username" pInputText [(ngModel)]="username" autocomplete="off" />
+            <label for="username">Username</label>
+          </span>
 
+          <span class="ui-float-label">
+            <input type="password" pPassword name="password" id="password" placeholder="......." [(ngModel)]="password" autocomplete="off"
+            />
+            <label for="password">Password</label>
+          </span>
 
-          <!-- <input type="text" name="username" placeholder="Username" [(ngModel)]="username" autocomplete="off" /> -->
-
-          <input type="password" name="pass" placeholder="......." [(ngModel)]="password" autocomplete="off" />
 
           <!-- <input type="submit" name="" value="Sign In" /> -->
 

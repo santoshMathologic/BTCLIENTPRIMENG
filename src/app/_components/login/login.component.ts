@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import {InputTextModule} from 'primeng/inputtext';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   private role: string = 'admin'
   private token: string;
   constructor() {
-    
+
   }
 
   ngOnInit() {
@@ -24,5 +25,7 @@ export class LoginComponent implements OnInit {
   login() {
 
     console.log("Login here");
+    console.log(this.username);
+    console.log(this.password);
   }
 }
