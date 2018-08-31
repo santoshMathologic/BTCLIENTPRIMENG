@@ -1,6 +1,6 @@
 .main-container {
-    /* background: url("../../../assets/images/main-container.jpg"); */
-    background:rgba(0, 0, 0,0.3);
+    background: url("../../../assets/images/main-container.jpg");
+    /* background:rgba(0, 0, 0,0.3); */
     background-size: cover;
     height: 100%;
     min-height: 800px;
@@ -121,6 +121,3 @@
     margin: 0;
 }
 
-.ui-float-label{
-    color:#0000;
-}
