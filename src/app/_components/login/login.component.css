@@ -114,9 +114,13 @@
 }
 
 .formBox .inner-part a {
-    color: #34495e;
+    color: #2399E5;
     font-size: 15px;
     padding: 7px 50px 0px 0px;
     text-decoration: none;
     margin: 0;
+}
+
+.ui-float-label{
+    color:#0000;
 }
