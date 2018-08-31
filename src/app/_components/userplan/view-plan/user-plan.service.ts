@@ -11,10 +11,6 @@ import {
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 // import { Observable } from "rxjs/Rx";
-import {
-    globalApiSettings,
-    environment
-} from '../../../_settings/settings.index';
 
 interface UserPlan {
     _id: object,
@@ -63,11 +59,9 @@ export class UserService {
     // }
 
     loadUserPlanWithPromise(query): Promise<any> {
-        let options = new RequestOptions({ headers: this.headers,params: query });
-        return this._http.get(globalApiSettings.planUri,options)
-            .toPromise()
-            .then(this.successResponse)
-            .catch(this.errorResponse);
+        
+
+        return null;
     }
 
 
@@ -83,14 +77,7 @@ export class UserService {
     }
 
     loadUserPlanWithOnlyPromise() {
-        let headers = new Headers();
-        headers.append('token', localStorage.getItem("token"));
-        headers.append('Content-Type', 'application/json');
-        let options = new RequestOptions({ headers: headers });
-        return this._http.get(globalApiSettings.planUri, options)
-            .toPromise()
-            .then(this.successCallBack)
-            .catch(this.errorCallBack);
+        
     }
 
     private successCallBack(successRes: Response) {
