@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+
 import {
   trigger,
   state,
@@ -50,12 +50,8 @@ import {
 export class LeftSidebarComponent implements OnInit {
 
   openClose: string = 'active';
-  constructor(private router: Router, private route: ActivatedRoute,
-    private translate: TranslateService,) {
-      this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de']);
-      this.translate.setDefaultLang('en');
-      const browserLang = this.translate.getBrowserLang();
-      this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de/) ? browserLang : 'en');
+  constructor(private router: Router, private route: ActivatedRoute) {
+     
 
   }
 

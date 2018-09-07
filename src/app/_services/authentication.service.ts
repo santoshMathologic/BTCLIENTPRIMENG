@@ -3,7 +3,7 @@ import {Http,RequestOptions,RequestOptionsArgs,Response,Request,Headers,XHRBacke
 
 import 'rxjs/add/operator/map';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
-import {globalApiSettings} from "../_settings/settings.index"
+
 
 class getCurrentDateInMin {
 
@@ -24,7 +24,7 @@ export class AuthenticateService {
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
         headers.append("Authorization", "Basic " + btoa(username + ":" + password));
         let options = new RequestOptions({ "headers": headers });
-        return this._http.post(globalApiSettings.loginUri, { "username": username, "password": password }, options)
+        return this._http.post("", { "username": username, "password": password }, options)
             .toPromise().then((response) => response.json());
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeftSidebarComponent } from '../left-sidebar/left-sidebar.component';
-import { TranslateService } from '@ngx-translate/core';
+
 import { Router, NavigationEnd } from '@angular/router';
 import {
   trigger,
@@ -39,11 +39,8 @@ export class HeaderComponent implements OnInit {
   search: string;
   openClose: string = 'active';
 
-  constructor(private leftSidebarComponent: LeftSidebarComponent, private translate: TranslateService, public router: Router) {
-    this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de|zh-CHS/) ? browserLang : 'en');
+  constructor(private leftSidebarComponent: LeftSidebarComponent, public router: Router) {
+    
 
   }
 
@@ -65,8 +62,6 @@ export class HeaderComponent implements OnInit {
     this.openClose = (this.openClose === 'active') ? 'inactive' : 'active';
 
   }
-  changeLang(language: string) {
-    this.translate.use(language);
-  }
+  
 
 }

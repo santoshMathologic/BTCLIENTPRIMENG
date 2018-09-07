@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import { Http } from '@angular/http';
-import { ILogin } from '../_interfaces/login.interface';
+
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class LoginService implements ILogin {
+export class LoginService {
 
     isLoggedIn: boolean = false;
 
