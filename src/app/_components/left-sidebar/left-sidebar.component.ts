@@ -92,10 +92,7 @@ export class LeftSidebarComponent implements OnInit {
     return dom.classList.contains(this.pushRightClass);
   }
 
-  changeLang(language: string) {
-    this.translate.use(language);
-}
-
+ 
   rltAndLtr() {
     const dom: any = document.querySelector('body');
     dom.classList.toggle('rtl');
